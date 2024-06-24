@@ -13,3 +13,8 @@ $ npm install --global expo-cli
  $ expo init nome_do_projeto --npm
  
  ```
+
+## Conceitos
+
+### Hooks 
+* Permite que você use estados e outros recursos do React sem escrever uma classe. Encapsula funcionalidades e facilita o reaproveitamento da sua lógica.
