@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Text,
   View,
@@ -11,15 +12,7 @@ import { styles } from "./styles";
 import { Participant } from "../../components/Participant";
 
 export function Home() {
-  const participants = [
-    "Bruno",
-    "Emanuele",
-    "Victor",
-    "Ana",
-    "Laura",
-    "Vera",
-    "Antonio",
-  ];
+  const [participants, setParticipants] = useState(["Emanuele"]);
 
   function handleParticipantAdd() {
     if (participants.includes("Bruno")) {
@@ -28,6 +21,7 @@ export function Home() {
         "Já Existe participante com esse Nome!!!"
       );
     }
+    setParticipants((prevState) => [...prevState,"Ana"]);
   }
 
   function handleParticipantRemove(name: string) {
